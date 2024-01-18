@@ -35,9 +35,9 @@
 -- Not stable (relative order of equal elements may change).
 
 - Time Complexity: 
--- Best Case: O(n2) - Occurs when the input array is already sorted.
--- Average Case: O(n2) - Consistently inefficient due to nested loops.
--- Worst Case: O(n2) - Occurs when the input array is in reverse order.
+-- Best Case: O(n^2) - Occurs when the input array is already sorted.
+-- Average Case: O(n^2) - Consistently inefficient due to nested loops.
+-- Worst Case: O(n^2) - Occurs when the input array is in reverse order.
 
 ### Quick Sort:
 
