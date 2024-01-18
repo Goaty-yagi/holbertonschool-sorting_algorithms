@@ -13,8 +13,8 @@
 - Key Characteristics: It has a relatively high time complexity, but it is easy to understand and implement.
 - Time Complexity:
 -- Best Case: O(n) - Occurs when the input array is already sorted, and no swaps are needed.
--- Average Case: O(n2) - Occurs when the elements are randomly ordered, resulting in multiple passes and swaps.
--- Worst Case: O(n2) - Occurs when the input array is in reverse order, leading to the maximum number of passes and swaps.
+-- Average Case: O(n^2) - Occurs when the elements are randomly ordered, resulting in multiple passes and swaps.
+-- Worst Case: O(n^2) - Occurs when the input array is in reverse order, leading to the maximum number of passes and swaps.
 
 ### Insertion Sort:
 
