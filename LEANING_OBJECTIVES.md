@@ -22,8 +22,8 @@
 - Key Characteristics: Efficient for small datasets, simple to understand and implement, works well for partially sorted data.
 - Time Complexity: 
 -- Best Case: O(n) - Occurs when the input array is nearly sorted or already sorted, as only a few comparisons and shifts are needed.
--- Average Case: O(n2) - Occurs in the general case when elements are randomly ordered, requiring multiple comparisons and shifts.
--- Worst Case: O(n2) - Occurs when the input array is in reverse order, leading to the maximum number of comparisons and shifts.
+-- Average Case: O(n^2) - Occurs in the general case when elements are randomly ordered, requiring multiple comparisons and shifts.
+-- Worst Case: O(n^2) - Occurs when the input array is in reverse order, leading to the maximum number of comparisons and shifts.
 
 ### Selection Sort:
 
