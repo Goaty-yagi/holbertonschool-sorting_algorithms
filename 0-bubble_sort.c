@@ -3,6 +3,9 @@
 /**
  * bubble_sort - Perform a single pass of the Bubble Sort algorithm.
  *
+ * @array: Pointer to the array to be sorted.
+ * @size: Size of the array.
+ * 
  * This function compares adjacent elements in the array and
  * swaps them if they are in the wrong order. It repeats this
  * process until the end of the array is reached.
