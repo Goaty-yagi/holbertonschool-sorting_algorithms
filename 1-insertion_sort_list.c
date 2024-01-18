@@ -24,21 +24,34 @@ listint_t *node_swapper(listint_t *list, listint_t **root)
 	{
 		temp_next = list->next;
 		temp_prev = list->prev;
+
 		/* make current node tobe next node*/
-		list->next = temp_next->next;
+		if (temp_next)
+			list->next = temp_next->next;
+		if (list->next)
+			list->next->prev = list;
 		list->prev = temp_next;
 
 		/* make next node tobe current node*/
-		temp_next->next = list;
-		temp_next->prev = temp_prev;
+		if (temp_next)
+		{
+			temp_next->next = list;
+			temp_next->prev = temp_prev;
+		}
 		if (temp_prev)
+		{
 			temp_prev->next = temp_next;
+		}
 		else
+		{
 			*root = temp_next;
+		}
 		print_list(*root);
 		list->prev = node_swapper(temp_prev, root);
 		if (list->prev == NULL)
+		{
 			list->prev = *root;
+		}
 		return (list);
 	}
 	return (list->next);
