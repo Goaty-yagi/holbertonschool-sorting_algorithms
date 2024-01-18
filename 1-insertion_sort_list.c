@@ -1,11 +1,9 @@
 #include "sort.h"
 
 /**
- * node_swapper - Swap adjacent nodes if needed
- *
- *
- * @list: Pointer to the current node
- * @root: Pointer to the root of the linked list
+ * node_swapper - Swap adjacent nodes if needed.
+ * @list: Pointer to the current node.
+ * @root: Pointer to the root of the linked list.
  *
  * This function swaps the current node with its next node if the current
  * node's value is greater than the next node's value. It updates the root
@@ -60,10 +58,10 @@ listint_t *node_swapper(listint_t *list, listint_t **root)
 }
 
 /**
- * insertion_sort_list - Sort a doubly linked list using insertion
- * sort algorithm
+ * insertion_sort_list - Sort a doubly linked list
+ * using insertion sort algorithm.
  *
- * @list: Pointer to the head of the linked list
+ * @list: Pointer to the head of the linked list.
  *
  * This function sorts a doubly linked list in ascending order using the
  * insertion sort algorithm. The list is modified in place.
