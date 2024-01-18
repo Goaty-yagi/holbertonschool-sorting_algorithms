@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * @brief Perform a single pass of the Bubble Sort algorithm.
+ * bubble_sort - Perform a single pass of the Bubble Sort algorithm.
  *
  * This function compares adjacent elements in the array and
  * swaps them if they are in the wrong order. It repeats this
