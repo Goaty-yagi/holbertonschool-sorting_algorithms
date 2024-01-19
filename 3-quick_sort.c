@@ -52,8 +52,11 @@ size_t lomuto_partition(int *array, size_t low, size_t high, size_t size)
 		}
 		inner_counter = inner_counter + 1;
 	}
-	swap(&array[partition_index + 1], &array[high]);
-	print_array(array, size);
+	if (array[partition_index + 1] != array[high])
+	{
+		swap(&array[partition_index + 1], &array[high]);
+		print_array(array, size);
+	}
 	return (partition_index + 1); /*no less than pivot*/
 }
 
