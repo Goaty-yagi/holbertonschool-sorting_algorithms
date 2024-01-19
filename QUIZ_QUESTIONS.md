@@ -190,5 +190,5 @@ def func(n):
 - [ ] O(nlog(n))
 - [ ] O(2^n)
 
-he dominant factor in determining the time complexity is the nested loop, which is O(n^2). The second loop and the constant time operations do not change this dominant term, so the overall time complexity is O(n^2).
+The dominant factor in determining the time complexity is the nested loop, which is O(n^2). The second loop and the constant time operations do not change this dominant term, so the overall time complexity is O(n^2).
 

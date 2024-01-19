@@ -46,7 +46,7 @@
 - Time Complexity: 
 -- Best Case: O(nlogn) - Occurs when the chosen pivot consistently divides the array into roughly equal parts.
 -- Average Case: O(nlogn) - Expected performance when the pivot selection and partitioning are well-balanced.
--- Worst Case: O(n2) - Occurs when the pivot consistently results in highly imbalanced partitions.
+-- Worst Case: O(n^2) - Occurs when the pivot consistently results in highly imbalanced partitions.
 
 ### Merge Sort:
 
