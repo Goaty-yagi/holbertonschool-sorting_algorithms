@@ -24,6 +24,7 @@ void swap(int *a, int *b)
  * @array: The array to be partitioned.
  * @low: The starting index of the partition.
  * @high: The ending index of the partition.
+ * @size: The size of the array.
  *
  * Description: This function implements the Lomuto partition scheme
  * for Quick Sort. It selects the last element as the pivot and
@@ -66,6 +67,7 @@ size_t lomuto_partition(int *array, size_t low, size_t high, size_t size)
  * @array: The array to be sorted.
  * @low: The starting index of the array or subarray.
  * @high: The ending index of the array or subarray.
+ * @size: The size of the array.
  *
  * Description: This function is a recursive implementation of the
  * Quick Sort algorithm. It repeatedly partitions the array and
