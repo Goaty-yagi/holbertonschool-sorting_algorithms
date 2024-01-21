@@ -11,15 +11,24 @@ V_FLAGS = --leak-check=full --show-leak-kinds=all --track-origins=yes
 BT = betty
 HEADER = $(wildcard *.h)
 
-all:$(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-	./$(NAME)
+MAIN_DIR = mains
+MAIN_FILES = main0 main1 main2 main3
+BINARIES = $(MAIN_FILES:%=%)
 
-first:
-	$(CC) $(CFLAGS) -c -o $(SRC)
+all: $(BINARIES)
+
+# Rule to build a specific main file
+$(BINARIES): %: $(OBJ) $(MAIN_DIR)/%.c
+	$(CC) $(CFLAGS) $^ -o $@
+	./$@
+
+.PHONY: $(BINARIES)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) -rf *~ $(NAME) $(OBJ)
+	$(RM) -rf *~ $(NAME) $(BINARIES) $(OBJ)
 
 betty:
 	$(BT) $(SRC) $(HEADER)
