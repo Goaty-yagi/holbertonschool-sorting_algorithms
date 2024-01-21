@@ -9,6 +9,23 @@ This repository contains various sorting algorithms implemented in C. These algo
 - Selection Sort
 - Quick Sort
 
+## Table of Contents :world_map:
+
+- [Dependency](#dependency)
+- [Overview](#overview)
+- [Compile](#compile)
+- [Usage](#usage)
+- [Details](#details)
+
+## Dependency
+
+```
+- Ubuntu 20.04
+- gcc 9.4.0
+- git 2.25.1
+- GNU Make 4.2.1 
+```
+
 ## Overview
 
 ### Bubble Sort
@@ -27,6 +44,14 @@ Selection Sort is an in-place comparison sorting algorithm. It has O(n^2) time c
 
 Quick Sort is a divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot.
 
+## Compile
+
+Install gcc: install gcc with `apt-get install gcc` (if necessary)
+Install make: install make with `apt-get install make` (if necessary)
+
+Our repository contains a makefile, and with makefile it allows you to compile all of the our code to your own main.c with simple command `make`.
+
+## Usage
 
 ## Details
 
