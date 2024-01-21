@@ -5,6 +5,10 @@
 - How to select the best sorting algorithm for a given input
 - What is a stable sorting algorithm
 
+Extra Objectives
+- What is the boundary between a big data set and a small data set?
+- What is the call stack?
+
 ## 1, At least four different sorting algorithms
 
 ### Bubble Sort:
@@ -196,3 +200,58 @@ Examples of stable sorting algorithms include:
 - Bubble Sort: Like Insertion Sort, it is stable because it compares and swaps adjacent elements, preserving the order of equal elements.
 
 On the other hand, algorithms like Quick Sort are not inherently stable, as they can change the order of equal elements during the sorting process. If stability is a crucial requirement for your application, it's important to choose a sorting algorithm that guarantees this property.
+
+## 5, What is the boundary between a big data set and a small data set?
+
+The boundary between a big data set and a small data set is not precisely defined and can vary based on context and industry standards. However, in general terms, the distinction is often based on the size of the dataset and the challenges associated with processing and managing it.
+
+Here are some rough guidelines, but these are not universally agreed upon:
+
+- Small Data:
+Typically refers to datasets that are small enough to be easily handled by traditional data processing tools and methods.
+Can fit comfortably in the memory of a single machine.
+Examples might include datasets with a few thousand to a few million records.
+
+- Medium Data:
+Falls between small and big data.
+May require more sophisticated processing tools but is still manageable with traditional relational databases and common data analysis tools.
+Size is often in the range of tens of millions to a few hundred million records.
+
+- Big Data:
+Involves datasets that are too large to be processed efficiently using traditional methods.
+Requires distributed computing frameworks and specialized tools like Apache Hadoop or Apache Spark.
+Often characterized by data sizes in the order of hundreds of gigabytes, terabytes, or petabytes.
+
+It's important to note that these distinctions are relative, and what is considered "big" or "small" can vary based on the capabilities of available technology and the specific challenges of a given domain or industry. Additionally, the concept of big data goes beyond just the size of the dataset; it also involves dealing with the velocity, variety, and complexity of the data.
+
+## 6, What is the call stack?
+
+The call stack is a region of memory that is used to manage the execution of functions in a computer program.
+It keeps track of the function calls and their respective contexts (local variables, return addresses, etc.) during the execution of a program.
+The call stack operates on a last-in, first-out (LIFO) basis, meaning that the most recently called function is the first one to be completed.
+
+Here's a brief overview of how the call stack works:
+
+- Function Calls:
+When a function is called in a program, a new stack frame is created on the call stack for that function. This stack frame contains information such as local variables, parameters, and the return address.
+
+- Stack Frame:
+A stack frame is a block of memory within the call stack dedicated to a specific function call.
+It includes information needed for the execution of that function.
+
+- Nested Calls:
+If a function calls another function, a new stack frame is added on top of the previous one.
+This process can continue with multiple nested function calls.
+
+- Return Addresses:
+The return address of each function call is stored in its stack frame. When a function completes its execution,
+the control returns to the address stored in the previous stack frame.
+
+- Stack Pointer:
+The stack pointer is a register or memory location that keeps track of the top of the call stack.
+It is adjusted as functions are called and return.
+
+- Stack Overflow:
+If the call stack becomes too deep due to a large number of nested function calls, it can lead to a stack overflow, causing the program to terminate.
+
+The call stack is a crucial component of program execution, helping manage the flow of control and the storage of local variables for each function call. Understanding the call stack is essential for debugging, as it provides insights into the order of function calls and their respective contexts during program execution.
