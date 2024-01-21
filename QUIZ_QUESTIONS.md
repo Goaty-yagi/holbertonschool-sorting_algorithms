@@ -1,7 +1,7 @@
 # Quiz Questions
-
+<p align="center">
 <img src="https://i.stack.imgur.com/WcBRI.png" alt="banner"></div>
-
+</p>
 ## Big O notations, ordered from most efficient to least efficient:
 
 - O(1): Constant time complexity. The algorithm's performance does not depend on the input size.
@@ -109,6 +109,10 @@ void f(unsigned int n)
 - [ ] O(nlog(n))
 - [ ] O(2^n)
 
+In each iteration of the loop, the loop variable i is multiplied by 2 (i = i * 2). This means that the loop will iterate through powers of 2: 1, 2, 4, 8, 16,
+and so on, until i becomes greater than or equal to n.
+The number of iterations required for i to become greater than or equal to n can be expressed as log base 2 of n. Therefore, the time complexity of the loop is O(log n).
+
 ```bash
 var factorial = function(n) {
     if(n == 0) {
@@ -126,6 +130,9 @@ var factorial = function(n) {
 - [ ] O(log(n))
 - [ ] O(nlog(n))
 - [ ] O(2^n)
+
+In each recursive call, the function multiplies the current value of n by the result of the factorial of (n - 1). The recursion continues until n becomes 0, 
+at which point the function returns 1. Therefore, the number of recursive calls is equal to the value of n.
 
 ```bash
 foreach($numbers as $number)
@@ -166,6 +173,9 @@ void f(unsigned int n)
 - [x] O(nlog(n))
 - [ ] O(2^n)
 
+The outer loop is O(n), the inner loop is O(log(n)). 
+So, the time complexity of the function is O(n * log n).
+
 ```python
 def func(n):
     a=5
@@ -190,5 +200,32 @@ def func(n):
 - [ ] O(nlog(n))
 - [ ] O(2^n)
 
-The dominant factor in determining the time complexity is the nested loop, which is O(n^2). The second loop and the constant time operations do not change this dominant term, so the overall time complexity is O(n^2).
+The dominant factor in determining the time complexity is the nested loop, which is O(n^2). The second loop and the constant time
+operations do not change this dominant term, so the overall time complexity is O(n^2).
+
+```bash
+int Fibonacci(int number)
+{
+    if (number <= 1) return number;
+
+    return Fibonacci(number - 2) + Fibonacci(number - 1);
+}
+```
+
+- [ ] O(1)
+- [ ] O(n)
+- [ ] O(n!)
+- [ ] O(n^2)
+- [ ] O(log(n))
+- [ ] O(nlog(n))
+- [x] O(2^n)
+
+The number of recursive calls grows exponentially with the input value. Each level of recursion branches into two additional calls,
+leading to a binary tree structure of recursive calls. As a result, the time complexity can be expressed as O(2^n), 
+where "n" is the input parameter representing the Fibonacci number to be computed.
+
+
+
+
+
 
